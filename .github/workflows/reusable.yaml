@@ -1,5 +1,4 @@
 name: Reusable Workflow
-
 on:
   workflow_call:
     inputs:
@@ -22,10 +21,9 @@ jobs:
   log-context-and-inputs:
     runs-on: ubuntu-latest
     steps:
-      - name: Display GitHub Context
+      - name: Dispay Github Context
         run: echo '${{ toJSON(github) }}'
       - name: Display name input
         run: echo ${{ inputs.name }}
       - name: Display access-token secret
         run: echo ${{ secrets.access-token }}
-
